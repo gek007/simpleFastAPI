@@ -4,9 +4,6 @@ app = FastAPI(title="Simple FastAPI Server", version="1.0.0")
 
 @app.get("/kostya")
 async def kostya_route():
-    """
-    Simple route that returns a greeting message for Kostya
-    """
     return {"message": "Hello Kostya! Welcome to FastAPI!", "status": "success"}
 
 if __name__ == "__main__":
