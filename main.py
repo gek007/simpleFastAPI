@@ -11,7 +11,7 @@ app = FastAPI(title="Simple FastAPI Server", version="1.0.0")
 @app.get("/")
 async def kostya_route():
     logger.info("kostya_route endpoint was called")
-    response = {"message": f"Hello Kostya Shilkrot! Welcome to FastAPI! {env['MY_VAR']}", "status": "success"}
+    response = {"message": f"Hello Kostya Shilkrot! Welcome to FastAPI! {env.get('MY_VAR', 'Default Value')}", "status": "success"}
     logger.info(f"kostya_route response: {response}")
     return response
 
