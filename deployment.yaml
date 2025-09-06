@@ -15,6 +15,5 @@ spec:
       containers:
       - name: simple-fastapi
         image: simple-fastapi:latest
-        imagePullPolcy: Never
         ports:
         - containerPort: 8000
