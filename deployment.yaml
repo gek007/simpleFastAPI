@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-fastapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: simple-fastapi
+  template:
+    metadata:
+      labels:
+        app: simple-fastapi
+    spec:
+      containers:
+      - name: simple-fastapi
+        image: simple-fastapi:latest
+        imagePullPolcy: Never
+        ports:
+        - containerPort: 8000
